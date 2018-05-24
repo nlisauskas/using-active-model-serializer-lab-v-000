@@ -15,7 +15,7 @@ $(function() {
       if(info["inventory"] === 0) {
         inventory = "<strong>Sold Out</strong>"
       }
-
+      $("#product-" + id).html(description + "<br>" + inventory)
     });
   });
 });
