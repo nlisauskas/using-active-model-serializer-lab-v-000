@@ -11,7 +11,10 @@ $(function() {
     var id = $(this).data("id");
     $.get("/products/" + id + ".json", function(info) {
       var description = "<p>" + info["description"] + "</p>"
-      var inventory = "<p>" + info["inventory"] + "</p>"
+      var inventory = "<strong>Available</strong"
+      if(info["inventory"] === 0) {
+        inventory = "<strong>Sold Out</strong>"
+      }
 
     });
   });
