@@ -26,7 +26,7 @@ class ProductsController < ApplicationController
     @product = Product.find_by_id(params[:id])
     respond_to do |format|
       format.html { render :show }
-      format.json { render json: @product, status: 200}
+      format.json { render json: @product}
     end
   end
 
